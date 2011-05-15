@@ -8,6 +8,10 @@ class Tagging
 
   belongs_to :tag
 
+  # Datamapper doesnt throw the next line in apparently,
+  # or theres an error before it gets added..whatever
+  property :tag_id, Integer
+
   def taggable
     taggable_type.get!(taggable_id)
   end
